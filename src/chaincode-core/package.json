@@ -1,0 +1,11 @@
+{
+    "name": "@hlf-examples/chaincode-core",
+    "version": "1.0.0",
+    "description": "",
+    "author": "Renat Gubaev",
+    "license": "ISC",
+    "dependencies": {
+        "@ts-core/backend": "^1.0.17"
+    },
+    "devDependencies": {}
+}

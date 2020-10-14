@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+dist/
+/bin/
+src/chaincode_compiled_nestjs
+src/chaincode_compiled_vanilla
+network/test/mychannel.block
+network/test/mychannel.tx

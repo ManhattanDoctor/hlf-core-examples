@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+STATUS=0
+FILE=./chaincode_deployed
+
+echo "Check chaincode is deployed"
+while [[ ! ${STATUS} -eq 1 ]]
+do
+    echo "Waiting for deploying chaincode"
+    if [[ -f "$FILE" ]]; then
+        echo "$FILE exists."
+        STATUS=1
+    fi
+
+    sleep 3
+done
+
+echo "Start application"
+npm run start:dev

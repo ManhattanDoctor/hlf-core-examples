@@ -1,0 +1,49 @@
+{
+    "name": "hlf-examples-backend",
+    "version": "1.0.0",
+    "author": "Renat Gubaev",
+    "license": "ISC",
+    "description": "Hlf examples backend",
+    "main": "index.js",
+    "scripts": {
+        "start": "ts-node-dev --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/main.ts",
+        "lint": "npm run format && tsc --noEmit --project src",
+        "lint:fix": "npm run format:fix",
+        "format": "prettier --list-different \"{src}/**/*.{ts,js,json}\"",
+        "format:fix": "prettier --write \"{src}/**/*.{ts,js,json}\" --loglevel warn"
+    },
+    "dependencies": {
+        "@hlf-core/api": "^1.0.0",
+        "@hlf-core/transport": "^1.0.15",
+        "@hlf-examples/common": "file:./common",
+        "@nestjs/common": "6.10.11",
+        "@nestjs/core": "6.10.11",
+        "@nestjs/jwt": "6.1.1",
+        "@nestjs/microservices": "6.10.11",
+        "@nestjs/passport": "6.1.1",
+        "@nestjs/platform-express": "6.10.11",
+        "@nestjs/platform-fastify": "6.10.11",
+        "@nestjs/platform-socket.io": "6.10.11",
+        "@nestjs/platform-ws": "6.10.11",
+        "@nestjs/swagger": "4.0.9",
+        "@nestjs/websockets": "6.10.11",
+        "@ts-core/backend": "^1.0.17",
+        "@ts-core/backend-nestjs": "^6.0.10",
+        "@ts-core/common": "^1.0.115",
+        "@types/socket.io": "2.1.4",
+        "fabric-client": "1.4.7",
+        "fabric-network": "1.4.7",
+        "fabric-shim": "1.4.5",
+        "passport": "0.4.1",
+        "passport-http-bearer": "1.0.1",
+        "passport-jwt": "4.0.0",
+        "reflect-metadata": "0.1.13",
+        "swagger-ui-express": "4.1.1"
+    },
+    "devDependencies": {
+        "ts-node": "8.10.2",
+        "ts-node-dev": "1.0.0-pre.50",
+        "typescript": "3.7.3",
+        "tsconfig-paths": "3.9.0"
+    }
+}

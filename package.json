@@ -1,0 +1,16 @@
+{
+    "name": "hlf-core-examples",
+    "version": "1.0.0",
+    "description": "Examples for chaincode",
+    "main": "index.js",
+    "scripts": {},
+    "engines": {
+        "node": ">= 12.12.18"
+    },
+    "author": "Renat Gubaev",
+    "license": "ISC",
+    "devDependencies": {
+        "prettier": "1.19.1"
+    },
+    "dependencies": {}
+}
