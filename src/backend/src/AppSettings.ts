@@ -28,6 +28,10 @@ export class AppSettings extends EnvSettingsStorage implements ILoggerSettings, 
     //
     // --------------------------------------------------------------------------
 
+    public get rootUserId(): string {
+        return this.getValue('ROOT_USER_ID');
+    }
+
     public get rootUserPrivateKey(): string {
         return this.getValue('ROOT_USER_PRIVATE_KEY');
     }

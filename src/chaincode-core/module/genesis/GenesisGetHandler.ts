@@ -6,6 +6,7 @@ import { GenesisService } from './GenesisService';
 import { TransportCommandFabricAsyncHandler } from '@hlf-core/transport/chaincode/handler';
 import { TransportFabricChaincodeReceiver } from '@hlf-core/transport/chaincode';
 import { StubHolder, ITransportFabricStubHolder } from '@hlf-core/transport/chaincode/stub';
+import { UserGuard } from '../../guard';
 
 export class GenesisGetHandler extends TransportCommandFabricAsyncHandler<void, IGenesis, GenesisGetCommand> {
     // --------------------------------------------------------------------------
@@ -24,6 +25,7 @@ export class GenesisGetHandler extends TransportCommandFabricAsyncHandler<void, 
     //
     // --------------------------------------------------------------------------
 
+    @UserGuard({ isNeedCheck: false })
     protected async execute(params: void, @StubHolder() holder: ITransportFabricStubHolder): Promise<IGenesis> {
         return this.service.get(holder.stub.stub);
     }

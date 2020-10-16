@@ -25,7 +25,7 @@ export class UserListHandler extends TransportCommandFabricAsyncHandler<IUserLis
     //
     // --------------------------------------------------------------------------
 
-    @UserGuard()
+    @UserGuard({ isNeedCheck: false })
     protected async execute(params: IUserListDto, @StubHolder() holder: IUserStubHolder): Promise<IUserListDtoResponse> {
         return holder.database.user.findPaginated(params);
     }

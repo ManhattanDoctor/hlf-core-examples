@@ -14,7 +14,7 @@
     },
     "dependencies": {
         "@hlf-core/api": "^1.0.0",
-        "@hlf-core/transport": "^1.0.15",
+        "@hlf-core/transport": "^1.0.17",
         "@hlf-examples/common": "file:./common",
         "@nestjs/common": "6.10.11",
         "@nestjs/core": "6.10.11",
@@ -27,7 +27,7 @@
         "@nestjs/platform-ws": "6.10.11",
         "@nestjs/swagger": "4.0.9",
         "@nestjs/websockets": "6.10.11",
-        "@ts-core/backend": "^1.0.17",
+        "@ts-core/backend": "^1.0.20",
         "@ts-core/backend-nestjs": "^6.0.10",
         "@ts-core/common": "^1.0.115",
         "@types/socket.io": "2.1.4",
