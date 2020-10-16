@@ -1,6 +1,6 @@
 import { TransformUtil } from '@ts-core/common/util';
 import { LedgerCommand, LedgerTransportCommandAsync } from '../LedgerCommand';
-import { IPaginationBookmark, PaginableBookmark } from '@ts-core/common/dto';
+import { IPaginationBookmark, IPaginableBookmark } from '@ts-core/common/dto';
 import { ITraceable } from '@ts-core/common/trace';
 import { LedgerUser } from '../../../ledger/user';
 
@@ -35,5 +35,5 @@ export class UserListCommand extends LedgerTransportCommandAsync<IUserListDto, I
     }
 }
 
-export interface IUserListDto extends PaginableBookmark<LedgerUser>, ITraceable {}
+export interface IUserListDto extends IPaginableBookmark<LedgerUser>, ITraceable {}
 export interface IUserListDtoResponse extends IPaginationBookmark<LedgerUser> {}

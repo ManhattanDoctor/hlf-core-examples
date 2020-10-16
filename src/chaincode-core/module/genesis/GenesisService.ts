@@ -7,7 +7,7 @@ import { LedgerRole } from '@hlf-examples/common/ledger/role';
 import { LedgerUser } from '@hlf-examples/common/ledger/user';
 import { TransformUtil } from '@ts-core/common/util';
 import { Genesis } from '@hlf-examples/common/transport/command';
-import { TransportFabricStub } from '@hlf-core/transport/chaincode/stub';
+import { ITransportFabricStub, TransportFabricStub } from '@hlf-core/transport/chaincode/stub';
 import { TransportFabricChaincodeReceiver } from '@hlf-core/transport/chaincode';
 import { TransportCryptoManagerEd25519 } from '@ts-core/common/transport/crypto';
 import { UserService } from '../user';
@@ -57,7 +57,7 @@ export class GenesisService extends LoggerWrapper {
         };
     }
 
-    private stubGet(stub: ChaincodeStub): TransportFabricStub {
+    private stubGet(stub: ChaincodeStub): ITransportFabricStub {
         return new TransportFabricStub(
             stub,
             null,
